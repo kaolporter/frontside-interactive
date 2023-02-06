@@ -1,3 +1,5 @@
+import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js";
+
 const preload = () => {
 
   let manager = new THREE.LoadingManager();
