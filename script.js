@@ -58,7 +58,7 @@ class Environment {
   createRenderer() {
 
     this.renderer = new THREE.WebGLRenderer({alpha:true});
-    this.renderer.setSize( this.container.clientWidth, this.container.clientHeight );
+    this.renderer.setSize( innerWidth, innerHeight );
 
     this.renderer.setPixelRatio( Math.min( window.devicePixelRatio, 2));
 
