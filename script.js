@@ -1,6 +1,7 @@
-import * as THREE from "https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js";
+import * as THREE from "https://unpkg.com/three@0.126.1/build/three.module.js";
 
 const preload = () => {
+  console.log("preloading...")
 
   let manager = new THREE.LoadingManager();
   manager.onLoad = function() { 
@@ -59,8 +60,8 @@ class Environment {
 
   createRenderer() {
 
-    this.renderer = new THREE.WebGLRenderer({alpha:true});
-    this.renderer.setSize( innerWidth, innerHeight );
+    this.renderer = new THREE.WebGLRenderer();
+    this.renderer.setSize( this.container.clientWidth, this.container.clientHeight );
 
     this.renderer.setPixelRatio( Math.min( window.devicePixelRatio, 2));
 
